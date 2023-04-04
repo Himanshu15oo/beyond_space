@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>eLEARNING - eLearning HTML Template</title>
+        <title>Beyond Space</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -35,10 +35,87 @@
             .navbar-nav .nav-link:not(:last-child) {
   margin-right: 10rem;
 }
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
 .w-80 {
-        width: 90%;
+        width: 95%;
         margin: auto;
     }
+
+    button {
+ font-size: 16px;
+ position: relative;
+ margin: auto;
+ padding: 1em 2.5em 1em 2.5em;
+ border: none;
+ background: #fff;
+ transition: all 0.1s linear;
+ box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+ transform: scale(0.95);
+}
+
+button span {
+ color: #464646;
+}
+
+button .border {
+ position: absolute;
+ border: 0.15em solid #fff;
+ transition: all 0.3s 0.08s linear;
+ top: 50%;
+ left: 50%;
+ width: 9em;
+ height: 3em;
+ transform: translate(-50%, -50%);
+}
+
+button:hover .border {
+ display: block;
+ width: 9.9em;
+ height: 3.7em;
+}
+
+.full-rounded {
+ border-radius: 2em;
+}
+.rounded-button {
+  border-radius: 20px;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+}
+
+/* DROPDOWN  */
+.dropdown-menu {
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+}
+
+.dropdown-item {
+  color: #333;
+}
+
+.dropdown-item:hover {
+  color: #fff;
+  background-color: #007bff;
+}
         </style>
     </head>
     <body>
@@ -68,30 +145,131 @@
             >
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="contact.html" class="btn btn-primary py-4 px-lg-5 ms-auto d-none d-lg-block me-auto" style="width: 220px;">
+            <!-- <a href="contact.html" class="btn btn-primary py-4 px-lg-5 ms-auto d-none d-lg-block me-auto" style="width: 220px;">
                 <i class="fas fa-phone-alt"></i>
-            </a>
+            </a> -->
             <div class="collapse navbar-collapse" id="navbarCollapse" style="background-color: #c9bdaf;">
-                <div class="navbar-nav mx-auto p-4 p-lg-0 d-flex justify-content-center">
-                    <a href="index.html" class="nav-item nav-link active me-3">Shop</a>
-                    <a href="about.html" class="nav-item nav-link me-3">Collective</a>
+                <div class="navbar-nav mx-auto p-4 p-lg-0 d-flex justify-content-start">
+                    <div class="nav-item dropdown flex-grow-1">
+                        <a href="#" class=" nav-link me-3" data-bs-toggle="dropdown">Shop By</a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="#" class="dropdown-item">Lounge Seating</a>
+                            <a href="#" class="dropdown-item">Collaborative workspace</a>
+                            <a href="#" class="dropdown-item">Open area workspace</a>
+                            <a href="#" class="dropdown-item">Manager room</a>
+                            <a href="#" class="dropdown-item">Meeting room</a>
+                            <a href="#" class="dropdown-item">Acoustic pods</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown flex-grow-1">
+                        <a href="#" class="nav-link me-3" data-bs-toggle="dropdown">Desking</a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="#" class="dropdown-item">Executive desks</a>
+                            <a href="#" class="dropdown-item">Manager desks</a>
+                            <a href="#" class="dropdown-item">Workstations</a>
+                            <a href="#" class="dropdown-item">Height Adjustable desk</a>
+                            <a href="#" class="dropdown-item">Meeting table</a>
+                            <a href="#" class="dropdown-item">Training table</a>
+                            <a href="#" class="dropdown-item">Coffee table</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown flex-grow-1">
+                        <a href="#" class="nav-link me-3" data-bs-toggle="dropdown">Chairs</a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="#" class="dropdown-item">Executive chairs</a>
+                            <a href="#" class="dropdown-item">Visitor chairs</a>
+                            <a href="#" class="dropdown-item">Ergonomic office chairs</a>
+                            <a href="#" class="dropdown-item">Task chairs workstation</a>
+                            <a href="#" class="dropdown-item">Meeting chairs</a>
+                            <a href="#" class="dropdown-item">Armchairs</a>
+                            <a href="#" class="dropdown-item">Bar stools</a>
+                            <a href="#" class="dropdown-item">Dining chairs</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown flex-grow-1">
+                        <a href="#" class="nav-link me-3" data-bs-toggle="dropdown">Storage</a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="#" class="dropdown-item">Low console cabinet</a>
+                            <a href="#" class="dropdown-item">Cabinets</a>
+                            <a href="#" class="dropdown-item">Biohphilic cabinets</a>
+                            <a href="#" class="dropdown-item">pedestals Drawer</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown flex-grow-1">
+                        <a href="#" class="nav-link me-3" data-bs-toggle="dropdown">Sofas</a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="#" class="dropdown-item">Three seater</a>
+                            <a href="#" class="dropdown-item">Two seater</a>
+                            <a href="#" class="dropdown-item">Single seater</a>
+                            <a href="#" class="dropdown-item">Lounge arm chair</a>
+                            <a href="#" class="dropdown-item">Acoustic seatings</a>
+                            <a href="#" class="dropdown-item">Poufs</a>
+                            <a href="#" class="dropdown-item">Poufs</a>
+                            <a href="#" class="dropdown-item">Modular seating</a>
+                            <a href="#" class="dropdown-item">Exclusive collection</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown flex-grow-1">
+                        <a href="#" class="nav-link me-3" data-bs-toggle="dropdown">Phone Pod</a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="#" class="dropdown-item">Single Pod</a>
+                            <a href="#" class="dropdown-item">Double Pod</a>
+                            <a href="#" class="dropdown-item">Meating Pod</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown flex-grow-1">
+                        <a href="#" class="nav-link me-3" data-bs-toggle="dropdown">PDUS Technology</a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="#" class="dropdown-item">PDU</a>
+                            <a href="#" class="dropdown-item">Wireless charger</a>
+                            <a href="#" class="dropdown-item">Flipper</a>
+                            <a href="#" class="dropdown-item">Cable tray</a>
+                            <a href="#" class="dropdown-item">Cable riser</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown flex-grow-1">
+                        <a href="#" class="nav-link me-3" data-bs-toggle="dropdown">Exclusive Collection</a>
+                        <div class="dropdown-menu fade-down m-0">
+                            <a href="#" class="dropdown-item">Workstation</a>
+                            <a href="#" class="dropdown-item">Manager desk</a>
+                            <a href="#" class="dropdown-item">Soft seatings</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown flex-grow-1">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="button" style="background-color: #ffffff;">
+                                    <i class="fas fa-search" style="font-size: 1rem; height: 20px; color: #000;"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown flex-grow-1">
+                        <!-- <i class="fa fa-search" style="margin-right: 30px;"></i> -->
+                        <i class="fas fa-user white-icon" style="margin-right: 30px; color: #ffffff;"></i>
+                    </div>
+                    <div class="nav-item dropdown flex-grow-1 pt-1">
+                        <i class="fas fa-shopping-cart" style="margin-right: 30px; color: #ffffff;"></i>
+                    </div>
+                    <!-- <a href="about.html" class="nav-item nav-link me-3">Collective</a>
                     <a href="courses.html" class="nav-item nav-link me-3">Designers</a>
                     <a href="courses.html" class="nav-item nav-link me-3">About Us</a>
-                    <a href="courses.html" class="nav-item nav-link">Contact</a>
+                    <a href="courses.html" class="nav-item nav-link">Contact</a> -->
                 </div>
                 <!-- <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu fade-down m-0">
-                            <a href="team.html" class="dropdown-item">Our Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
-                        </div>
-                    </div> -->
-                <a href="" class="btn btn-primary py-4 px-lg-5 ms-4 d-none d-lg-block" style="width: 220px;">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Shop By</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="team.html" class="dropdown-item">Lounge Seating</a>
+                        <a href="testimonial.html" class="dropdown-item">collaborative Workspace</a>
+                        <a href="404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div> -->
+                <!-- <a href="" class="btn btn-primary py-4 px-lg-5 ms-4 d-none d-lg-block" style="width: 220px;">
                     <i class="fa fa-search" style="margin-right: 30px;"></i>
                     <i class="fas fa-user" style="margin-right: 30px;"></i>
                     <i class="fas fa-shopping-cart"></i>
-                </a>
+                </a> -->
                 <!-- <i class="fa fa-arrow-right ms-3"></i> -->
             </div>
         </nav>
@@ -160,8 +338,8 @@
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-sm-10 col-lg-8">
-                                    <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
-                                    <h1 class="display-3 text-white animated slideInDown">Get Educated Online From Your Home</h1>
+                                    <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Welcome to Beyond Space</h5>
+                                    <h1 class="display-3 text-white animated slideInDown">Best Furniture Collection For Your Interior.</h1>
                                     <p class="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
                                     <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                                     <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
@@ -176,49 +354,60 @@
         <div class="card w-80 border-0">
             <div class="card-body" style="border: 1px solid #ddd;
             border-radius: 20px;
-           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-           padding: 20px;">
+           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
                 <section class="compony">
-                    <div class="container">
-                        <div class="row position-relative">
-                            <div class="cards">
-                                <div class="row">
-                                    <div class="col-lg-3">
-                                        <div class="icon-box d-inline">
-                                            <img src="./Document_files/box.svg" class="box" alt="">
-                                        </div>
-                                        <div class="icon-content d-inline-block ms-2">
-                                            <h6>Discount</h6>
-                                            <span>Every week new sales</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="icon-box d-inline">
-                                            <img src="./Document_files/Group.svg" class="truck" alt="">
-                                        </div>
-                                        <div class="icon-content d-inline-block ms-2">
-                                            <h6>Free Delivery</h6>
-                                            <span>100% Free for all orders</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="icon-box d-inline">
-                                            <img src="./Document_files/24-hours.svg" class="twenty" alt="">
-                                        </div>
-                                        <div class="icon-content d-inline-block ms-2">
-                                            <h6>Great Support 24/7</h6>
-                                            <span>We care your experiences</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="icon-box d-inline">
-                                            <img src="./Document_files/shield.svg" class="sheild" alt="">
-                                        </div>
-                                        <div class="icon-content d-inline-block ms-2">
-                                            <h6>secure Payment</h6>
-                                            <span>100% Secure Payment Method</span>
-                                        </div>
-                                    </div>
+                    <div class="container w-80">
+                        <div class="row">
+                            <div class="col-lg-3 text-center">
+                                <div class="icon-box d-inline-block">
+                                    <img
+                                        src="project.png"
+                                        class="box"
+                                        alt=""
+                                        width="50px"
+                                    >
+                                </div>
+                                <div class="icon-content d-inline-block ms-2">
+                                    <h6>Project based quoting</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 text-center">
+                                <div class="icon-box d-inline-block">
+                                    <img
+                                        src="requirement.png"
+                                        class="truck"
+                                        alt=""
+                                        width="50px"
+                                    >
+                                </div>
+                                <div class="icon-content d-inline-block ms-2">
+                                    <h6>Requirement Analysis</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 text-center">
+                                <div class="icon-box d-inline-block">
+                                    <img
+                                        src="space.png"
+                                        class="twenty"
+                                        alt=""
+                                        width="50px"
+                                    >
+                                </div>
+                                <div class="icon-content d-inline-block ms-2">
+                                    <h6>Space Planning</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 text-center">
+                                <div class="icon-box d-inline-block">
+                                    <img
+                                        src="proposal.png"
+                                        class="sheild"
+                                        alt=""
+                                        width="50px"
+                                    >
+                                </div>
+                                <div class="icon-content d-inline-block ms-2">
+                                    <h6>Proposal</h6>
                                 </div>
                             </div>
                         </div>
@@ -275,71 +464,62 @@
         <!-- <div class="container-xxl py-5 category"> -->
         <!-- <div class="container"> -->
         <!-- CAROUSEL 1 START  -->
-        <div class="container-xxl py-5 category">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h2 class="bg-white text-center text-primary px-3">Finest Designs</h2>
-                    <h5 class="mb-5">We manufacture contemporary furniture for collaborative spaces.</h5>
-                </div>
-                <!-- <div id="carouselExampleAutoplaying" class="carousel slide wow fadeInUp" data-bs-ride="carousel">
+        <!-- <div style="margin-top: 5rem;"> -->
+        <div class="container-fluid category p-0 mt-5">
+            <div class="container-fluid p-0 m-0">
+                <!-- <div class="container-fluid category py-5">
+            <div class="container"> -->
+                <div id="carouselExampleAutoplaying" class="carousel slide wow fadeInUp" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <div class="row" style="width: 100%">
-                                <div class="col-md-3">
-                                    <div class="card border-0" style="width: 25rem;">
-                                        <img
-                                            class="card-img-top"
-                                            src="image1.jpg"
-                                            alt="Card image cap"
-                                            style="height: 300px;"
-                                        >
-                                        <div class="card-body">
-                                            <p class="card-text">Card 1</p>
-                                        </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-12 mr-1 mb-1">
+                                    <div class="card flex-grow-1">
+                                        <img src="image1.jpg" class="card-img-top" alt="Placeholder image">
+                                        <!-- <a href="#" class="btn btn-primary" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                                            Buy Now
+                                        </a> -->
+                                        <!-- <button class="full-rounded" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: transparent;">
+                                            <span style="color: #000000;">Shop TV Stands</span>
+                                            <div class="border full-rounded" style="background-color: #ffffff;"></div>
+                                        </button> -->
+                                        <button class="rounded-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                                            <b>Shop TV Stands</b>
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="card border-0" style="width: 25rem;">
+                                <div class="col-lg-4 col-md-4 col-sm-12 mr-1 mb-1">
+                                    <div class="card flex-grow-1">
+                                        <img src="image2.jpg" class="card-img-top" alt="Placeholder image">
+                                        <button class="rounded-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                                            <b>Shop TV Stands</b>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 mr-1 mb-1">
+                                    <div class="card flex-grow-1">
+                                        <img src="image3.jpg" class="card-img-top" alt="Placeholder image">
+                                        <button class="rounded-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                                            <b>Shop TV Stands</b>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-md-3">
+                                    <div class="card border-0">
                                         <img
                                             class="card-img-top"
-                                            src="image2.jpg"
+                                            src="image4.jpg"
                                             alt="Card image cap"
                                             style="height: 250px;"
                                         >
                                         <div class="card-body">
-                                            <p class="card-text">Card 2</p>
+                                            <p class="card-text">Card 4</p>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="card border-0" style="width: 25rem;">
-                                        <img
-                                            class="card-img-top"
-                                            src="image3.jpg"
-                                            alt="Card image cap"
-                                            style="height: 250px;"
-                                        >
-                                        <div class="card-body">
-                                            <p class="card-text">Card 3</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                            <div class="card border-0">
-                                <img
-                                    class="card-img-top"
-                                    src="image4.jpg"
-                                    alt="Card image cap"
-                                    style="height: 250px;"
-                                >
-                                <div class="card-body">
-                                    <p class="card-text">Card 4</p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
+                        <!-- <div class="carousel-item">
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="card border-0">
@@ -394,6 +574,34 @@
                                     </div>
                                 </div>
                             </div>
+                        </div> -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-12 mr-1 mb-1">
+                                    <div class="card flex-grow-1">
+                                        <img src="image2.jpg" class="card-img-top" alt="Placeholder image">
+                                        <button class="rounded-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                                            <b>Shop TV Stands</b>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 mr-1 mb-1">
+                                    <div class="card flex-grow-1">
+                                        <img src="image2.jpg" class="card-img-top" alt="Placeholder image">
+                                        <button class="rounded-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                                            <b>Shop TV Stands</b>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 mr-1 mb-1">
+                                    <div class="card flex-grow-1">
+                                        <img src="image2.jpg" class="card-img-top" alt="Placeholder image">
+                                        <button class="rounded-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                                            <b>Shop TV Stands</b>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <button
@@ -401,6 +609,7 @@
                         type="button"
                         data-bs-target="#carouselExampleAutoplaying"
                         data-bs-slide="prev"
+                        style="width: 5rem;"
                     >
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
@@ -410,100 +619,103 @@
                         type="button"
                         data-bs-target="#carouselExampleAutoplaying"
                         data-bs-slide="next"
+                        style="width: 5rem;"
                     >
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
-                </div> -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4 mb-4">
-                            <div class="card">
-                                <img src="image1.jpg" class="card-img-top" alt="Placeholder image">
-                                <div class="card-body d-flex align-items-center">
-                                    <div class="flex-grow-1">
-                                        <h6 class="card-title">Library Stool Chair</h6>
-                                        <p class="card-text">$20</p>
+                </div>
+                <div
+                    id="carouselExampleAutoplaying1"
+                    class="carousel slide wow fadeInUp"
+                    data-bs-ride="carousel"
+                    style="margin-top: 10px;"
+                >
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-12 mr-1 mb-1">
+                                    <div class="card flex-grow-1">
+                                        <img src="image1.jpg" class="card-img-top" alt="Placeholder image">
+                                        <!-- <a href="#" class="btn btn-primary" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                                            Buy Now
+                                        </a> -->
+                                        <!-- <button class="full-rounded" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background-color: transparent;">
+                                            <span style="color: #000000;">Shop TV Stands</span>
+                                            <div class="border full-rounded" style="background-color: #ffffff;"></div>
+                                        </button> -->
+                                        <button class="rounded-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                                            <b>Shop TV Stands</b>
+                                        </button>
                                     </div>
-                                    <a href="#" class="btn btn-primary">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 mr-1 mb-1">
+                                    <div class="card flex-grow-1">
+                                        <img src="image2.jpg" class="card-img-top" alt="Placeholder image">
+                                        <button class="rounded-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                                            <b>Shop TV Stands</b>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 mr-1 mb-1">
+                                    <div class="card flex-grow-1">
+                                        <img src="image3.jpg" class="card-img-top" alt="Placeholder image">
+                                        <button class="rounded-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                                            <b>Shop TV Stands</b>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4 mb-4">
-                            <div class="card">
-                                <img src="image2.jpg" class="card-img-top" alt="Placeholder image">
-                                <div class="card-body d-flex align-items-center">
-                                    <div class="flex-grow-1">
-                                        <h6 class="card-title">Library Stool Chair</h6>
-                                        <p class="card-text">$20</p>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-12 mr-1 mb-1">
+                                    <div class="card flex-grow-1">
+                                        <img src="image2.jpg" class="card-img-top" alt="Placeholder image">
+                                        <button class="rounded-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                                            <b>Shop TV Stands</b>
+                                        </button>
                                     </div>
-                                    <a href="#" class="btn btn-primary">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 mb-4">
-                            <div class="card">
-                                <img src="image4.jpg" class="card-img-top" alt="Placeholder image">
-                                <div class="card-body d-flex align-items-center">
-                                    <div class="flex-grow-1">
-                                        <h6 class="card-title">Library Stool Chair</h6>
-                                        <p class="card-text">$20</p>
+                                <div class="col-lg-4 col-md-4 col-sm-12 mr-1 mb-1">
+                                    <div class="card flex-grow-1">
+                                        <img src="image2.jpg" class="card-img-top" alt="Placeholder image">
+                                        <button class="rounded-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                                            <b>Shop TV Stands</b>
+                                        </button>
                                     </div>
-                                    <a href="#" class="btn btn-primary">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-4 mb-4">
-                            <div class="card">
-                                <img src="image1.jpg" class="card-img-top" alt="Placeholder image">
-                                <div class="card-body d-flex align-items-center">
-                                    <div class="flex-grow-1">
-                                        <h6 class="card-title">Library Stool Chair</h6>
-                                        <p class="card-text">$20</p>
+                                <div class="col-lg-4 col-md-4 col-sm-12 mr-1 mb-1">
+                                    <div class="card flex-grow-1">
+                                        <img src="image2.jpg" class="card-img-top" alt="Placeholder image">
+                                        <button class="rounded-button" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);">
+                                            <b>Shop TV Stands</b>
+                                        </button>
                                     </div>
-                                    <a href="#" class="btn btn-primary">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 mb-4">
-                            <div class="card">
-                                <img src="image2.jpg" class="card-img-top" alt="Placeholder image">
-                                <div class="card-body d-flex align-items-center">
-                                    <div class="flex-grow-1">
-                                        <h6 class="card-title">Library Stool Chair</h6>
-                                        <p class="card-text">$20</p>
-                                    </div>
-                                    <a href="#" class="btn btn-primary">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 mb-4">
-                            <div class="card">
-                                <img src="image4.jpg" class="card-img-top" alt="Placeholder image">
-                                <div class="card-body d-flex align-items-center">
-                                    <div class="flex-grow-1">
-                                        <h6 class="card-title">Library Stool Chair</h6>
-                                        <p class="card-text">$20</p>
-                                    </div>
-                                    <a href="#" class="btn btn-primary">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselExampleAutoplaying1"
+                        data-bs-slide="prev"
+                        style="width: 5rem;"
+                    >
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselExampleAutoplaying1"
+                        data-bs-slide="next"
+                        style="width: 5rem;"
+                    >
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -513,7 +725,7 @@
     <div class="container-xxl py-5 category">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h2 class=" bg-white text-center text-primary px-3">Category of Products</h2>
+                <h2 class=" bg-white text-center text-primary px-3">Project Based Quoting</h2>
                 <h5 class="mb-5">We manufacture contemporary furniture for collaborative spaces.</h5>
             </div>
             <div class="row g-3">
